@@ -14,6 +14,8 @@ count=0
 myexpression=expressionlist[1]
 for line in f:
     if re.search(myexpression[1:len(myexpression)-1],line):
+        line=line.rstrip()
+        print(line)
         count=count+1
 print('There are ',count,' that matched ',expressionlist[1],' in file ',expressionlist[2])
         
